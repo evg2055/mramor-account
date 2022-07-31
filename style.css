@@ -1,0 +1,84 @@
+html,body{
+        background-color: antiquewhite;
+}
+.page {
+    display: block;
+    height: 297mm;
+    width: 210mm;
+    background-color: white;
+    margin: 0 auto;
+    padding: 30px 30px 100px 30px;
+}
+/* header */
+.infoMe {
+    display: flex;
+    /* background-color: brown; */
+    font-size: 17px;
+    
+    
+}
+.infoUs {
+    display: flex;
+    /* align-items:baseline; */
+    justify-content:space-around;
+    background-color: aqua;
+    color: blue;
+    width: 100%;
+    
+    
+}
+.logo__infoMe {
+    height: 150px;
+    width: 150px;
+}
+.infoMe__h1 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.infoMe__buyer{
+    width:50%;
+}
+.infoMe__info_buyer {
+    display: grid;
+    
+        /* align-self: center; */
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 5px;
+    
+}
+.infoMe__seller {
+    width: 180px;
+    text-align: center;
+}
+/* end header */
+/* table header */
+.uasuly-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    color: blueviolet;
+    
+    
+}
+.header-table {
+    font-size: 25px;
+    line-height: 50px;
+}
+.sortiment__td_center {
+    text-align: center;
+}
+.sortiment__td_right {
+    text-align: end;
+}
+.grey-table {
+    background-color: rgb(177, 177, 177);
+    border-collapse: collapse;
+}
+.sortiment {
+    background-color: white;
+}
+.total-table {
+    text-align: right;
+    
+}
