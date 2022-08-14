@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainContent">
+        <!-- секция заказчика -->
+        <fieldset class="fieldset">
+            <legend>ЗАКАЗЧИК</legend>
+            <div><label for="">ФИО</label><br><input type="text"></div>
+            <div><label for="">Адрес</label><br><textarea name="" id="" cols="30" rows="2"></textarea> </div>
+            <div><label for="">Телефон</label><br><input type="text"> </div>
+            <div><label for="">Примечания</label><br><textarea name="" id="" cols="50" rows="2"></textarea> </div>
+            </fieldset>
+        <fieldset class="fieldset fieldset_vertical">
+            <legend>НОМЕНКЛАТУ́РА</legend>
+            <section class="sektion__header">
+            <div><label for="">Изделие</label><br><input type="text"></div>
+            <div><label for="">Материал</label><a href="" class="button_mini">+</a><br><input type="text" list="listSetMaterial" id="setMaterial">
+                <datalist id = "listSetMaterial">
+                    <option value = "callacata"> </option>
+                    <option value = "мансуровский"> </option>
+                    <option value = "дымовский"> </option>
+                </datalist> 
+            </div>
+            <div><label for="">Фаска</label><br><input type="text" list="listSetСhamfer">
+                <datalist id = "listSetСhamfer">
+                    <option value = "a"> </option>
+                    <option value = "z"> </option>
+                    <option value = "обратная f"> </option>
+                </datalist> 
+            </div>
+            <div><label for="">Мойка</label> <input type="checkbox" name="на базе" id=""><label for="">на базе</label><br><input type="text" list="listSetSink">
+                <datalist id = "listSetSink">
+                    <option value = "верхняя"> </option>
+                    <option value = "нижняя"> </option>
+                </datalist> 
+            </div>
+            <div><label for="">Примечания</label><br><textarea name="" id="" cols="50" rows="2"></textarea> </div>
+        </section>
+            <fieldset class="fieldset fieldset_vertical">
+                <legend>вид работы</legend>
+                <div class="fieldset fieldset_border">
+                    <div><label for="">Вид работы</label><a href="" class="button_mini">+</a><br><input type="text" list="listSetJob">
+                        <datalist id = "listSetJob">
+                            <option value = "callacata"> </option>
+                            <option value = "мансуровский"> </option>
+                            <option value = "дымовский"> </option>
+                        </datalist> 
+                        </div>
+                        <div><label for="">Количество</label><br><input type="text"> </div>
+                        <div><label for="">Цена</label><br><input type="text"> </div>
+                        <div><label for="">Итого</label><br><input type="text"> </div>
+                        <div><label for="">Примечания</label><br><textarea name="" id="" cols="48" rows="1"></textarea> </div>
+                </div>
+                    <button class="button">+</button>
+            </fieldset>
+        </fieldset>
+        <input type="submit">
+        
+    </div>
+    <script src="./test.js"></script>
+</body>
+</html>

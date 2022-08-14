@@ -1,0 +1,30 @@
+.fieldset {
+    display: flex;
+    justify-content: space-between;
+    /* color: red; */
+}
+.fieldset_vertical {
+    flex-direction: column;
+    /* color: blue; */
+}
+.fieldset_start {
+    justify-content: flex-start;
+}
+.fieldset_border {
+    border-bottom: 2px black dotted;
+}
+.sektion__header {
+    display: flex;
+    justify-content: space-between;
+}
+.button_mini {
+    text-decoration: none;
+    /* background-color: lightcoral; */
+    border-radius: 3px;
+    padding: 4px;
+    margin: 10px;
+}
+.button {
+    width: 30px;
+    height: 30px;
+}
