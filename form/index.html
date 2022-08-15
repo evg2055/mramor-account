@@ -18,15 +18,16 @@
             <div><label for="">Телефон</label><br><input type="text"> </div>
             <div><label for="">Примечания</label><br><textarea name="" id="" cols="50" rows="2"></textarea> </div>
             </fieldset>
+            <!-- шапка пункта -->
         <fieldset class="fieldset fieldset_vertical">
             <legend>НОМЕНКЛАТУ́РА</legend>
             <section class="sektion__header">
             <div><label for="">Изделие</label><br><input type="text"></div>
             <div><label for="">Материал</label><a href="" class="button_mini">+</a><br><input type="text" list="listSetMaterial" id="setMaterial">
                 <datalist id = "listSetMaterial">
-                    <option value = "callacata"> </option>
-                    <option value = "мансуровский"> </option>
-                    <option value = "дымовский"> </option>
+                    <option value = "callacata"></option>
+                    <option value = "мансуровский"></option>
+                    <option value = "дымовский"></option>
                 </datalist> 
             </div>
             <div><label for="">Фаска</label><br><input type="text" list="listSetСhamfer">
@@ -44,6 +45,7 @@
             </div>
             <div><label for="">Примечания</label><br><textarea name="" id="" cols="50" rows="2"></textarea> </div>
         </section>
+        <!-- пункт заказа -->
             <fieldset class="fieldset fieldset_vertical">
                 <legend>вид работы</legend>
                 <div class="fieldset fieldset_border">
@@ -51,7 +53,7 @@
                         <datalist id = "listSetJob">
                             <option value = "callacata"> </option>
                             <option value = "мансуровский"> </option>
-                            <option value = "дымовский"> </option>
+                            <option value = "дымовский" data-material=""> </option>
                         </datalist> 
                         </div>
                         <div><label for="">Количество</label><br><input type="text"> </div>
@@ -62,7 +64,7 @@
                     <button class="button">+</button>
             </fieldset>
         </fieldset>
-        <input type="submit">
+        <input type="submit" id="doneButton">
         
     </div>
     <script src="./test.js"></script>

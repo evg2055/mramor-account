@@ -1,24 +1,11 @@
-// let materials = {'imperiador':{'price': 200, 'pcs' : 'м/кв'}, 'imperiador':{'price': 300, 'pcs' : 'м/кв'}, 'daina':{'price': 200, 'pcs' : 'м/кв'}};
-
-// console.log(materials.imperiador.price)
-
 let inputMaterialsList = document.getElementById("listSetMaterial");
-let optionMaterialsList = document.querySelectorAll('#listSetMaterial option')
-let inputMaterials = document.getElementById("setMaterial")
-// inputMaterials.addEventListener('click', function() {
-//  for(let elem of materialsArr){
-//      let newOption = document.createElement('option');
-// if (! materialsArr.has(newOption.value)){ newOption.value = elem.name;
-//  console.log(materialsArr)
-//  inputMaterialsList.appendChild(newOption);}}
-// })
+let optionMaterialsList = document.querySelectorAll('#listSetMaterial option');
+let inputMaterials = document.getElementById("setMaterial");
+let done = document.getElementById('doneButton')
 
-for(let elem of optionMaterialsList) {
-    console.log(elem.value);
-}
-let materialsArr = new Set;
+let materialsObj = {};
 
-class Materials {
+class Option {
     name;
     price;
     pcs;
@@ -29,22 +16,35 @@ class Materials {
         this.pcs = pcs;
     }
 
-    addInArr() {
-        materialsArr.add(this);
+    addInArr(obj) {
+        obj[this.name] = this;
     }
 }
 
-let mramor = new Materials('imperiador', 200, 'м/кв');
-mramor.addInArr();
-let granite = new Materials('black', 300, 'м/кв');
-granite.addInArr();
+let mramor = new Option('imperiador', 200, 'м/кв');
+mramor.addInArr(materialsObj);
+let granite = new Option('black', 300, 'м/кв');
+granite.addInArr(materialsObj);
 
-for(let elem of materialsArr) {
+// for(let elem of materialsArr) {
+//     console.log(elem);
+//     for(let key in elem) {
+//         console.log(key)
+//     }
+// }
+
+function renderOption(obj, parentOption){
+    for(let key in obj){
     let newOption = document.createElement('option');
-    newOption.value = elem.name;
+    newOption.value = obj[key].name;
+    parentOption.appendChild(newOption);
+    }}
 
-    inputMaterialsList.appendChild(newOption);
-}
-
-
+    renderOption(materialsObj, inputMaterialsList);
+done.addEventListener('click', () => {
+    console.log(materialsObj[inputMaterials.value].price)
+}) ;
+// done.addEventListener('click', () => {
+//     renderOption(materialsObj, inputMaterialsList)
+// }) ;
 
