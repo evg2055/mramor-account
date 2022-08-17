@@ -14,6 +14,12 @@
 .fieldset_border {
     border-bottom: 2px black dotted;
 }
+/* .fieldsetNewOption {
+    background-color: rgb(211, 211, 211);
+} */
+.fieldset_modal {
+    background-color: rgb(185, 185, 185);
+}
 .sektion__header {
     display: flex;
     justify-content: space-between;
@@ -35,3 +41,21 @@
 .inputNewOptions_mini {
     width: 70px;
 }
+.modal__Container {
+    position: fixed;
+    pointer-events: none; 
+    opacity: 0;
+    left: 0;
+    top: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh; 
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .modal__Container_isOpen {
+    pointer-events: all; 
+    opacity: 1;
+  }
