@@ -25,9 +25,9 @@
             <div><label for="">Изделие</label><br><input type="text"></div>
             <div><label for="">Материал</label><a href="" class="button_mini">+</a><br><input type="text" list="listSetMaterial" id="setMaterial">
                 <datalist id = "listSetMaterial">
-                    <option value = "callacata"></option>
+                    <!-- <option value = "callacata"></option>
                     <option value = "мансуровский"></option>
-                    <option value = "дымовский"></option>
+                    <option value = "дымовский"></option> -->
                 </datalist> 
             </div>
             <div><label for="">Фаска</label><br><input type="text" list="listSetСhamfer">
@@ -49,7 +49,7 @@
             <fieldset class="fieldset fieldset_vertical">
                 <legend>вид работы</legend>
                 <div class="fieldset fieldset_border">
-                    <div><label for="">Вид работы</label><a href="" class="button_mini">+</a><br><input type="text" list="listSetJob">
+                    <div><label for="">Вид работы</label><a href="" class="button_mini">+</a><br><input type="text" list="listSetJob" id="setJobs">
                         <datalist id = "listSetJob">
                             <option value = "callacata"> </option>
                             <option value = "мансуровский"> </option>
@@ -65,6 +65,23 @@
             </fieldset>
         </fieldset>
         <input type="submit" id="doneButton">
+
+        <fieldset class="fieldset  fieldset_vertical">
+            <legend>создать новый 'Option'</legend>
+            <div>
+                <input type="text" id="inputName" class="inputNewOptions">
+                <input type="text" id="inputPrice" class="inputNewOptions">
+                <input type="text" id="inputPcs" list="pcs" class="inputNewOptions inputNewOptions_mini">
+                <datalist id = "pcs">
+                    <option value = "м/кв"> </option>
+                    <option value = "шт"> </option>
+                </datalist> 
+        </div>
+        <div>
+            <input type="submit" id="doneAddOption">
+        </div>
+            
+        </fieldset>
         
     </div>
     <script src="./test.js"></script>

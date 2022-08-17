@@ -7,6 +7,7 @@
     flex-direction: column;
     /* color: blue; */
 }
+
 .fieldset_start {
     justify-content: flex-start;
 }
@@ -27,4 +28,10 @@
 .button {
     width: 30px;
     height: 30px;
+}
+.inputNewOptions{
+    width: 200px;
+}
+.inputNewOptions_mini {
+    width: 70px;
 }
