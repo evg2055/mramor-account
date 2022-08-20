@@ -23,7 +23,7 @@
             <legend>НОМЕНКЛАТУ́РА</legend>
             <section class="sektion__header">
                 <div><label for="">Изделие</label><br><input type="text"></div>
-                <div><label for="">Материал</label><a href="" class="button_mini" id="ButtonAddMaterialsList">+</a><br><input type="text" list="listSetMaterial" id="setMaterial">
+                <div><label for="">Материал</label><a href="" class="button_mini" id="ButtonAddMaterialsList" >+</a><br><input type="text" list="listSetMaterial" id="setMaterial" class="datalistInputs">
                     <datalist id = "listSetMaterial"></datalist> 
                 </div>
                 <div>
@@ -48,41 +48,32 @@
         <!-- пункт заказа -->
             <fieldset class="fieldset fieldset_vertical">
                 <legend>вид работы</legend>
-                <div class="fieldset fieldset_border">
+                <table id="orderTable">
+                    <tr>
+                        <th>Вид работы</th>
+                        <th>Количество</th>
+                        <th>Цена</th>
+                        <th>Итого</th>
+                        <th colspan="2">Примечания</th>
+                    </tr>
+                </table>
+                <div class="fieldset">
                     <div>
-                        <label for="">Вид работы</label><a href="" class="button_mini" id="ButtonAddJobsList">+</a><br><input type="text" list="listSetJobs" id="setJobs">
+                        <label for="">Вид работы</label><a href="" class="button_mini" id="ButtonAddJobsList">+</a><br><input type="text" list="listSetJobs" id="setJobs" class="datalistInputs">
                         <datalist id = "listSetJobs">
-                            <option value = "callacata"> </option>
+                            <!-- <option value = "callacata"> </option>
                             <option value = "мансуровский"> </option>
-                            <option value = "дымовский" data-material=""> </option>
+                            <option value = "дымовский" data-material=""> </option> -->
                         </datalist> 
                     </div>
-                        <div><label for="">Количество</label><br><input type="text"></div>
-                        <div><label for="">Цена</label><br><input type="text"> </div>
-                        <div><label for="">Итого</label><br><input type="text"> </div>
-                        <div><label for="">Примечания</label><br><textarea name="" id="" cols="48" rows="1"></textarea> </div>
+                        <div><label for="" >Количество</label><br><input type="text" id="amountJob"></div>
+                        <div><label for="" >Цена</label><br><input type="text" id="priceJob"> </div>
+                        <div><label for="" >Итого</label><br><input type="text" id="totalJob"> </div>
+                        <div><label for="" >Примечания</label><br><textarea name="" cols="48" rows="1" id="otherJob"></textarea> </div>
                 </div>
-                <button class="button">+</button>
+                <button class="button" id="addJobs">+</button>
             </fieldset>
         </fieldset>
-        
-
-        <!-- <fieldset class="fieldset  fieldset_vertical" id="fieldsetNewOption">
-            <legend>создать новый 'Option'</legend>
-            <div>
-                <input type="text" id="inputName" class="inputNewOptions">
-                <input type="text" id="inputPrice" class="inputNewOptions">
-                <input type="text" id="inputPcs" list="pcs" class="inputNewOptions inputNewOptions_mini">
-                <datalist id = "pcs">
-                    <option value = "м/кв"> </option>
-                    <option value = "шт"> </option>
-                </datalist> 
-        </div> 
-       <div>
-            <input type="submit" id="doneAddOption" value="doneAddOption">
-        </div>
-            
-        </fieldset> -->
 
         <div class="modal__Container" id="modalContainer">
             <div class="modal__Content">
@@ -90,9 +81,9 @@
                     <fieldset class="fieldset  fieldset_vertical fieldset_modal" id="fieldsetNewOption">
                         <legend>создать новый 'Option'</legend>
                         <div>
-                            <input type="text" id="inputName" class="inputNewOptions">
-                            <input type="text" id="inputPrice" class="inputNewOptions">
-                            <input type="text" id="inputPcs" list="pcs" class="inputNewOptions inputNewOptions_mini">
+                            <input type="text" id="inputName" class="inputNewOptions" placeholder="наименование">
+                            <input type="text" id="inputPrice" class="inputNewOptions" placeholder="цена/ед.">
+                            <input type="text" id="inputPcs" list="pcs" class="inputNewOptions inputNewOptions_mini" placeholder="ед.">
                                 <datalist id = "pcs">
                                     <option value = "м/кв"> </option>
                                     <option value = "шт"> </option>
@@ -111,6 +102,7 @@
             </div>
         </div>
     </div>
+    
     <script src="./test.js"></script>
 </body>
 </html>

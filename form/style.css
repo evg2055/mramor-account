@@ -14,9 +14,6 @@
 .fieldset_border {
     border-bottom: 2px black dotted;
 }
-/* .fieldsetNewOption {
-    background-color: rgb(211, 211, 211);
-} */
 .fieldset_modal {
     background-color: rgb(185, 185, 185);
 }
@@ -58,4 +55,32 @@
   .modal__Container_isOpen {
     pointer-events: all; 
     opacity: 1;
+  }
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+
+  }
+  
+  thead th:nth-child(1) {
+    width: 30%;
+  }
+  
+  thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+  thead th:nth-child(3) {
+    width: 15%;
+  }
+  
+  thead th:nth-child(4) {
+    width: 55%;
+  }
+  
+  th, td {
+    text-align: start;
+    padding: 20px;
+    border-bottom: 2px solid black;
   }
